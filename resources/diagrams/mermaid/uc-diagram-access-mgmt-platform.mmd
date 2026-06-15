@@ -1,0 +1,38 @@
+flowchart LR
+    requester[Usuario Solicitante]
+    moderator[Moderador]
+    admin[Administrador]
+    entra[Microsoft Entra ID]
+    sailpoint[SailPoint IdentityNow]
+
+    subgraph Sistema[Plataforma de Acesso]
+        uc1((Autenticar usuario))
+        uc2((Submeter solicitacao de acesso))
+        uc3((Consultar status da solicitacao))
+        uc4((Listar solicitacoes pendentes))
+        uc5((Aprovar solicitacao))
+        uc6((Rejeitar solicitacao))
+        uc7((Atribuir funcao padrao))
+        uc8((Sincronizar identidade Entra ID))
+        uc9((Sincronizar identidade SailPoint))
+        uc10((Consultar auditoria))
+    end
+
+    requester --> uc1
+    requester --> uc2
+    requester --> uc3
+
+    moderator --> uc1
+    moderator --> uc4
+    moderator --> uc5
+    moderator --> uc6
+
+    admin --> uc10
+
+    uc1 --> entra
+    uc8 --> entra
+    uc9 --> sailpoint
+
+    uc5 --> uc7
+    uc7 --> uc8
+    uc7 --> uc9

@@ -1,0 +1,14 @@
+stateDiagram-v2
+    [*] --> PENDING
+    PENDING --> UNDER_REVIEW : moderador assume
+    PENDING --> APPROVED : aprovado diretamente
+    PENDING --> REJECTED : rejeitado diretamente
+    UNDER_REVIEW --> APPROVED : aprovar
+    UNDER_REVIEW --> REJECTED : rejeitar
+    PENDING --> CANCELLED : solicitante cancela
+    PENDING --> EXPIRED : expira SLA
+    UNDER_REVIEW --> EXPIRED : expira SLA
+    APPROVED --> [*]
+    REJECTED --> [*]
+    CANCELLED --> [*]
+    EXPIRED --> [*]

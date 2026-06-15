@@ -1,0 +1,123 @@
+erDiagram
+    USER ||--o{ ACCESS_REQUEST : "submete"
+    USER ||--o{ MODERATION_DECISION : "decide"
+    ACCESS_REQUEST ||--o| MODERATION_DECISION : "possui"
+    USER ||--o{ USER_ROLE : "recebe"
+    ROLE ||--o{ USER_ROLE : "atribui"
+    ROLE ||--o{ ROLE_PERMISSION : "possui"
+    PERMISSION ||--o{ ROLE_PERMISSION : "compoe"
+    USER ||--o{ EXTERNAL_IDENTITY_LINK : "vincula"
+    ACCESS_REQUEST ||--o{ PROVISIONING_TASK : "gera"
+    USER ||--o{ AUDIT_LOG : "atua_como_ator"
+    USER ||--o{ AUDIT_LOG : "atua_como_alvo"
+    USER ||--o{ NOTIFICATION : "recebe"
+
+    USER {
+        uuid id PK
+        string email
+        string full_name
+        string status
+        datetime created_at
+        datetime updated_at
+        datetime last_login_at
+    }
+
+    ACCESS_REQUEST {
+        uuid id PK
+        uuid requester_user_id FK
+        string requested_email
+        string justification
+        string status
+        uuid current_moderator_user_id FK
+        string correlation_id
+        datetime submitted_at
+        datetime review_started_at
+        datetime resolved_at
+        string resolution_reason
+    }
+
+    MODERATION_DECISION {
+        uuid id PK
+        uuid access_request_id FK
+        uuid moderator_user_id FK
+        string decision
+        string reason
+        datetime decided_at
+    }
+
+    ROLE {
+        uuid id PK
+        string code
+        string name
+        string description
+        boolean is_default
+        datetime created_at
+    }
+
+    PERMISSION {
+        uuid id PK
+        string code
+        string description
+    }
+
+    ROLE_PERMISSION {
+        uuid role_id FK
+        uuid permission_id FK
+    }
+
+    USER_ROLE {
+        uuid id PK
+        uuid user_id FK
+        uuid role_id FK
+        uuid assigned_by_user_id FK
+        string assignment_reason
+        datetime assigned_at
+        datetime revoked_at
+    }
+
+    EXTERNAL_IDENTITY_LINK {
+        uuid id PK
+        uuid user_id FK
+        string provider
+        string external_id
+        string external_username
+        string sync_status
+        datetime last_synced_at
+    }
+
+    PROVISIONING_TASK {
+        uuid id PK
+        uuid access_request_id FK
+        uuid user_id FK
+        string status
+        int retry_count
+        string error_code
+        string error_message
+        datetime started_at
+        datetime finished_at
+    }
+
+    AUDIT_LOG {
+        uuid id PK
+        string event_type
+        string entity_type
+        uuid entity_id
+        uuid actor_user_id FK
+        uuid subject_user_id FK
+        string correlation_id
+        string causation_id
+        json payload
+        string ip_address
+        string user_agent
+        datetime created_at
+    }
+
+    NOTIFICATION {
+        uuid id PK
+        uuid user_id FK
+        string type
+        string channel
+        string status
+        json payload
+        datetime sent_at
+    }

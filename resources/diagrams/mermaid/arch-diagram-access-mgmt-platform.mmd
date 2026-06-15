@@ -1,0 +1,26 @@
+flowchart LR
+    U[Usuario Solicitante] --> FE[Next.js Web App]
+    M[Moderador] --> FE
+
+    FE --> GW[API Gateway / BFF]
+    GW --> IAS[Identity & Access Service]
+    GW --> ARS[Access Request Service]
+    GW --> MS[Moderation Service]
+
+    IAS --> PG[(PostgreSQL)]
+    ARS --> PG
+    MS --> PG
+    PS[Provisioning Service] --> PG
+    AUD[Audit Service] --> PG
+    IS[Integration Service] --> PG
+
+    ARS <--> NATS[NATS]
+    MS <--> NATS
+    PS <--> NATS
+    IAS <--> NATS
+    AUD <--> NATS
+    NS[Notification Service] <--> NATS
+    IS <--> NATS
+
+    IS --> ENTRA[Microsoft Entra ID API]
+    IS --> SP[SailPoint IdentityNow API]

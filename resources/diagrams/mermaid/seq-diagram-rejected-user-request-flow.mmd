@@ -1,0 +1,20 @@
+sequenceDiagram
+    actor Moderador
+    participant UI as Next.js
+    participant API as API Gateway/BFF
+    participant MOD as Moderation Service
+    participant ARS as Access Request Service
+    participant NATS as NATS
+    participant AUD as Audit Service
+    participant NOTIF as Notification Service
+
+    Moderador->>UI: Rejeita solicitacao com motivo
+    UI->>API: POST /access-requests/{id}/reject
+    API->>MOD: rejeitarSolicitacao()
+    MOD->>MOD: valida permissao e registra ModerationDecision
+    MOD->>NATS: publica AccessRequestRejected
+    MOD->>AUD: registrar rejeicao
+
+    NATS->>ARS: atualiza status da AccessRequest para REJECTED
+    NATS->>AUD: registra evento de negocio
+    NATS->>NOTIF: envia notificacao ao solicitante
