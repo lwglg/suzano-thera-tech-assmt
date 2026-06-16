@@ -2,7 +2,7 @@
 
 Aqui encontra-se redigida a modelagem da solução de software em núvem que visa servir uma plataforma de gestão moderada de acessos de usuários, integrada às plataformas Microsoft Entra ID e SailPoint IdentityNow.
 
-Todos os aspectos arquitetônicos e de casos de uso, à luz da especificação das condições de fronteiras iniciais, informados neste [documento](../resources/docs/pdf/Avaliação%20Técnica%20para%20Desenvolvedores%20Back%20Full.pdf), serão explorados em diferentes seções deste documento.
+Todos os aspectos arquitetônicos e de casos de uso, à luz da especificação das condições de fronteiras iniciais, informados neste [documento](./resources/docs/pdf/Avaliação%20Técnica%20para%20Desenvolvedores%20Back%20Full.pdf), serão explorados em diferentes seções deste documento.
 
 ## Índice de conteúdo
 
