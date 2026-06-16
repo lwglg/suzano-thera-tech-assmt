@@ -30,20 +30,20 @@ A solução pode ser organizada em uma arquitetura modular orientada a eventos, 
 
 Uma divisão prática seria:
 
-| Componente                        | Responsabilidade principal |
-| -----------                       | -------------------------- |
-| Next.js Web App   	            | UI, login, abertura de solicitação, tela de moderação, consulta de status |
-| API Gateway / BFF      	        | Entrada HTTP principal, agregação de respostas, validação de JWT |
-| Identity & Access Service  	    | Usuários, papéis, permissões, claims JWT, vínculo com Entra ID/SailPoint |
-| Access Request Service            | Gestão do ciclo de vida da solicitação de acesso |
-| Moderation Service                | Regras e ações de aprovação/rejeição por moderadores |
-| Provisioning Service              | Atribuição automática de função padrão e efetivação de acesso |
-| Integration Service               | Integrações com Microsoft Entra ID e SailPoint IdentityNow |
-| Audit Service                     | Persistência e consulta de trilha de auditoria |
-| Notification Service              | E-mails/notificações de status |
-| NATS                              | Broker de eventos e mensagens assíncronas |
-| PostgreSQL                        | Persistência relacional |
-| Observability Stack               | Logs estruturados, métricas, tracing |
+| Componente                | Responsabilidade principal                                                |
+|---------------------------|---------------------------------------------------------------------------|
+| Next.js Web App           | UI, login, abertura de solicitação, tela de moderação, consulta de status |
+| API Gateway / BFF         | Entrada HTTP principal, agregação de respostas, validação de JWT          |
+| Identity & Access Service | Usuários, papéis, permissões, claims JWT, vínculo com Entra ID/SailPoint  |
+| Access Request Service    | Gestão do ciclo de vida da solicitação de acesso                          |
+| Moderation Service        | Regras e ações de aprovação/rejeição por moderadores                      |
+| Provisioning Service      | Atribuição automática de função padrão e efetivação de acesso             |
+| Integration Service       | Integrações com Microsoft Entra ID e SailPoint IdentityNow                |
+| Audit Service             | Persistência e consulta de trilha de auditoria                            |
+| Notification Service      | E-mails/notificações de status                                            |
+| NATS                      | Broker de eventos e mensagens assíncronas                                 |
+| PostgreSQL                | Persistência relacional                                                   |
+| Observability Stack       | Logs estruturados, métricas, tracing                                      |
 
 ## Diagrama da arquitetura
 
@@ -78,7 +78,14 @@ flowchart LR
     IS --> SP[SailPoint IdentityNow API]
 ```
 
+> **Observação**
+> 
+> - Assume-se aqui que, sempre que possível, as componentes da plataforma serão encapsuladas em um contêineres Docker, com imagens dedicadas;
+> - O mecanismo de orquestração, a priori, não está definido, haja vista que isso é explorado na seção de escalabilidade.
+
+
 ---
 ## O que deseja fazer?
 - [Voltar ao topo](#índice-do-conteúdo)
 - [Voltar à raiz](../main.md)
+- [Bounded contexts e serviços](./bounded-context-services-specs.md);

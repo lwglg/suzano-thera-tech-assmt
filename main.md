@@ -21,7 +21,7 @@ Todos os aspectos arquitetônicos e de casos de uso, à luz da especificação d
 Como já supracitado, este sistema tem como função principal moderar a requisição de acessos para novos usuários, em um contexto corporativo e.g. à suite de ferramentas de software de uma empresa, através de um processo de moderação, a priori, por usuários já existentes (cadastrados) na base de dados do sistema e que possuem privilégios necessários para tal. De modo também à gerenciar a camada de autenticação e autenticação de novos usuários, existirão integrações desta plataforma às seguintes soluções:
 
 - [Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/identity/): Será responsável por lidar com a camada de autenticação, isto é sob o esquema OAuth2, i.e. 
-- [SailPoint IdentityNow](): Considerando que a criação de identidades será feita pelo Entra ID, a **governança** por outro lado será feita via interface do IdentityNow.
+- [SailPoint IdentityNow](https://documentation.sailpoint.com/): Considerando que a criação de identidades será feita pelo Entra ID, a **governança** por outro lado será feita via interface do IdentityNow.
 
 Com efeito, serão exploradas as diferentes nuances de modelagem desse sistema, consolidadas em uma proposta de arquitetura orientada a eventos para esse cenário, com foco em:
 
@@ -36,13 +36,12 @@ A estrutura dessa proposta será segmentada em diferentes seções:
 
 - [Visão da arquitetura](./sections/architecture-specs.md);
 - [Bounded contexts e serviços](./sections/bounded-context-services-specs.md);
-- [Fluxo orientado a eventos](./sections/event-oriented-flow-specs.md);
+- [Fluxo de negócio](./sections/event-oriented-flow-specs.md);
 - [Entidades de domínio](./sections/domain-entities-specs.md);
 - [Casos de uso](./sections/use-cases-specs.md);
 - [Análise de riscos](./sections/risk-assessment-specs.md);
-- [Aspectos de segurança](./sections/security-specs.md);
 - [Aspectos de escalabilidade](./sections/scalability-specs.md).
-- [Observações de implementação em Next.js + Nest.js + Sequelize + PostgreSQL + NATS]().
+- [Observações de implementação](./sections/implementation-specs.md).
 
 De posse de todo esse esquadrinhamento, as fases seguintes naturais, as quais não serão comtempladas nesse material, seriam:
 
@@ -62,3 +61,4 @@ Qualquer dúvida ou sugestão pode ser comunicada à Guilherme Lima Gonçalves. 
 ##  O que deseja fazer?
 
 - [Voltar ao topo](#índice-de-conteúdo)
+- [Visão da arquitetura](./sections/architecture-specs.md)
