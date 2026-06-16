@@ -51,7 +51,7 @@ De posse de todo esse esquadrinhamento, as fases seguintes naturais, as quais n�
 
 Qualquer dúvida ou sugestão pode ser comunicada à Guilherme Lima Gonçalves. Os meios pelos quais isso pode ser feito são:
 
-- Email: [lwglguilherme@gmail.com](mailto:lwglguilherme@gmail.com?subject=Contato | Avaliação Técnica | Suzano/Thera Consulting)
+- Email: [lwglguilherme@gmail.com](mailto:lwglguilherme@gmail.com)
 - Telefone: +55 51 9 8199 9952 ([WhatsApp](https://wa.me/5551981999952) | [Telegram](https://t.me/lwglg))
 - LinkedIn: [https://linkedin.com/in/guligon90]
 
