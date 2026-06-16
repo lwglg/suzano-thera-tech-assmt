@@ -41,7 +41,6 @@ A estrutura dessa proposta será segmentada em diferentes seções:
 - [Casos de uso](./sections/use-cases-specs.md);
 - [Análise de riscos](./sections/risk-assessment-specs.md);
 - [Aspectos de escalabilidade](./sections/scalability-specs.md).
-- [Observações de implementação](./sections/implementation-specs.md).
 
 De posse de todo esse esquadrinhamento, as fases seguintes naturais, as quais não serão comtempladas nesse material, seriam:
 

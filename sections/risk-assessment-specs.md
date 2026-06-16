@@ -92,6 +92,6 @@ O que segue agora é apenas uma listagem de pontos de risco, nas camadas pertine
 ---
 ## O que deseja fazer?
 - [Voltar ao topo](#ìndice-do-conteúdo)
-- [Voltar à raiz](../main.md)
+- [Voltar à raiz](../README.md)
 - [Casos de uso](./use-cases-specs.md)
 - [Aspectos de escalabilidade](./scalability-specs.md)

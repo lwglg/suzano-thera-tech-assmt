@@ -191,6 +191,6 @@ sequenceDiagram
 ## O que deseja fazer?
 
 - [Voltar ao topo](#índice-de-conteúdo)
-- [Voltar à raíz](../main.md)
+- [Voltar à raíz](../README.md)
 - [Entidades de domínio](./domain-entities-specs.md)
 - [Análise de risco](./risk-assessment-specs.md)

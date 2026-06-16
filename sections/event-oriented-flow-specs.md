@@ -250,6 +250,6 @@ Usados para efeitos externos ou interoperabilidade:
 ## O que deseja fazer?
 
 - [Voltar ao topo](#índice-de-conteúdo)
-- [Voltar à raíz](../main.md)
+- [Voltar à raíz](../README.md)
 - [Bounded contexts e serviços](./bounded-context-services-specs.md)
 - [Entidades de domínio](domain-entities-specs.md)

@@ -87,5 +87,5 @@ flowchart LR
 ---
 ## O que deseja fazer?
 - [Voltar ao topo](#índice-do-conteúdo)
-- [Voltar à raiz](../main.md)
+- [Voltar à raiz](../README.md)
 - [Bounded contexts e serviços](./bounded-context-services-specs.md);

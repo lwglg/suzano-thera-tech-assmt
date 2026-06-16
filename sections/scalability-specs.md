@@ -143,5 +143,5 @@ Esta proposta preserva a auditabilidade original, o controle de moderação huma
 ## O que deseja fazer?
 
 - [Voltar ao topo](#índice-do-conteúdo)
-- [Voltar à raíz](../main.md)
+- [Voltar à raíz](../README.md)
 - [Análise de risco](./risk-assessment-specs.md)

@@ -370,6 +370,6 @@ Abaixo está uma forma de modelar as tabelas principais com cardinalidades mais 
 ## O que deseja fazer?
 
 - [Voltar ao topo](#índice-de-conteúdo)
-- [Voltar à raíz](../main.md)
+- [Voltar à raíz](../README.md)
 - [Fluxo de negócio](./event-oriented-flow-specs.md)
 - [Casos de uso](./use-cases-specs.md)

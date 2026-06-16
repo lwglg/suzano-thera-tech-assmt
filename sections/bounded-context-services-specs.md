@@ -106,6 +106,6 @@ Aqui cada escopo e seus atributos posteriormente serão referidos à serviços e
 ##  O que deseja fazer?
 
 - [Voltar ao topo](#índice-de-conteúdo)
-- [Voltar à raíz](../main.md)
+- [Voltar à raíz](../README.md)
 - [Visão de arquitetura](./architecture-specs.md);
 - [Fluxo de negócio](./event-oriented-flow-specs.md);
