@@ -25,12 +25,12 @@ Como já supracitado, este sistema tem como função principal moderar a requisi
 
 Com efeito, serão exploradas as diferentes nuances de modelagem desse sistema, consolidadas em uma proposta de arquitetura orientada a eventos para esse cenário, com foco em:
 
-- solicitação de acesso feita por um usuário externo/candidato;
-- moderação por um usuário com permissão de moderador;
-- provisionamento automático de função padrão após aprovação;
-- integração com Microsoft Entra ID e SailPoint IdentityNow;
-- autenticação/autorização com OAuth2 + JWT;
-- auditabilidade ponta a ponta com trilha de logs e usuários envolvidos.
+- Solicitação de acesso feita por um usuário externo/candidato;
+- Moderação por um usuário com permissão de moderador;
+- Provisionamento automático de função padrão após aprovação;
+- Integração com Microsoft Entra ID e SailPoint IdentityNow;
+- Autenticação/autorização com OAuth2 + JWT;
+- Auditabilidade ponta a ponta com trilha de logs e usuários envolvidos.
 
 A estrutura dessa proposta será segmentada em diferentes seções:
 
