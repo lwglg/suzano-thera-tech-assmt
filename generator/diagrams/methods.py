@@ -73,7 +73,7 @@ def convert_mermaid_to_format(
 
     output_filepath = Path(default_output_dir).joinpath(target_format.value)
     output_filepath.mkdir(parents=True, exist_ok=True)
-    output_filepath.joinpath(f"{filename}.{target_format.value}")
+    output_filepath = output_filepath.joinpath(f"{filename}.{target_format.value}")
 
     output_abspath = output_filepath.resolve()
 

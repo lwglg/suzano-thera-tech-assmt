@@ -47,7 +47,7 @@ def convert_markdown_to_pdf(
 
     output_filepath = Path(default_output_dir)
     output_filepath.mkdir(parents=True, exist_ok=True)
-    output_filepath.joinpath(f"{filename}.pdf")
+    output_filepath = output_filepath.joinpath(f"{filename}.pdf")
 
     output_abspath = output_filepath.resolve()
 
