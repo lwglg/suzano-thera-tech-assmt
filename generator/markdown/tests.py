@@ -8,11 +8,11 @@ from .methods import convert_markdown_to_pdf
 __all__ = ["perform_test"]
 
 
-def perform_test(filename: str) -> None:
+def perform_test(filename: str, input_dir: str = "sections") -> None:
     """Just a quick exploratory test. This will dissapear with unit tests."""
 
     logger.info(f"Convertendo '{filename}.md' para um arquivo PDF...")
-    result = convert_markdown_to_pdf(filename)
+    result = convert_markdown_to_pdf(filename, default_input_dir=input_dir)
 
     output_filepath = result.get("value")
     errors = result.get("errors")
